@@ -13,14 +13,14 @@ CREATE TABLE bootcamps
 (
 	id int NOT NULL AUTO_INCREMENT,
 	name varchar(255) NOT NULL,
-	outcomes BOOLEAN DEFAULT false,
+	outcomes varchar(255) NOT NULL,
 	location varchar(255) NOT NULL,
-  logo varchar(255) NOT NULL,
-  rating int NOT NULL,
-  technology varchar(255) NOT NULL,
-  duration int NOT NULL,
-  comments varchar(255) NOT NULL,
-  costs int NOT NULL,
+  	logo varchar(255) NOT NULL,
+  	rating int NOT NULL,
+  	technology varchar(255) NOT NULL,
+ 	duration int NOT NULL,
+  	comments varchar(255) NOT NULL,
+  	costs int NOT NULL,
 	PRIMARY KEY (id)
 );
 
