@@ -12,8 +12,8 @@ CREATE TABLE users
 CREATE TABLE bootcamps
 (
 	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
-	outcomes varchar(255) NOT NULL,
+	bootcamp_name varchar(255) NOT NULL,
+	outcomes int NOT NULL,
 	location varchar(255) NOT NULL,
   	logo varchar(255) NOT NULL,
   	rating int NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE bootcamps
  	duration int NOT NULL,
   	comments varchar(255) NOT NULL,
   	costs int NOT NULL,
-	PRIMARY KEY (id)
+  	url varchar(255) NOT NULL
 );
 
 CREATE TABLE comments
