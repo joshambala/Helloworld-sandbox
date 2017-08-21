@@ -1,0 +1,83 @@
+html {
+  height: 100%;
+  width: 100%;
+  table-layout: fixed;
+  display: table;
+}
+
+body {
+  background-image: url(http://images.adsttc.com/media/images/53d7/acc1/c07a/8059/5e00/01ab/large_jpg/Skyline2_low_res.jpg?1406643371);
+  background-size: 160%;
+  background-repeat: no-repeat;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.background-transparent {
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+}
+
+h2 {
+  color: white;
+  font-size: 4.5em;
+  text-shadow: 0 0 5px black;
+}
+
+label {
+  font-size: 1.3em;
+}
+
+.modal-title {
+  font-size: 1.6em !important;
+}
+
+.form-control {
+  font-size: 1.3em;
+}
+
+.btn-default {
+  font-size: 1.3em;
+  background-color: teal;
+  color: white;
+}
+
+.btn-default:hover {
+  background-color: #31b0d5;
+  color: white;
+}
+
+.modal-content {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.landing-container {
+  padding: 100px 0;
+  max-width: 340px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.landing-btn {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  clear: both;
+  margin: 10px auto;
+  font-size: 20px;
+  background-color: teal;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-size: 200%;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    background-size: 400%;
+    background-position: 52% 0%;    
+  }
+}
