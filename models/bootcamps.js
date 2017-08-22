@@ -73,5 +73,6 @@ module.exports = function(sequelize, DataTypes) {
   // };
 
   // Makes the Bootcamp model available for other files (will also create a table)
+  return Bootcamp;
   module.exports = Bootcamp;
 };
