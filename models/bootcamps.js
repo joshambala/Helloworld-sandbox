@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Bootcamp = sequelize.define("Bootcamp", {
-    name: {
+    bootcamp_name: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -72,5 +72,7 @@ module.exports = function(sequelize, DataTypes) {
   //   });
   // };
 
+  // Makes the Bootcamp model available for other files (will also create a table)
   return Bootcamp;
+  module.exports = Bootcamp;
 };
