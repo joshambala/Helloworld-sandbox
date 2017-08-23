@@ -51,6 +51,50 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/bootcamps", function(req, res) {
+    var arr =
+    var bootcamp = {
+      name: 'UC Berkeley Extension',
+      outcomes: 90,
+      location: 'San Francisco',
+      logo:'Berkeley',
+      rating:5,
+      technology:'HTML, CSS, JS, NODE, SQL',
+      duration:6,
+      comments:'This course was great. I would totally do it again.',
+      costs:10000,
+      url:'www.codingbootcamp.berkeley.edu/'
+    }
+    // {
+    //   name: 'Flatiron',
+    //   outcomes: 95,
+    //   location: 'New York City',
+    //   logo:'Flatiron',
+    //   rating:5,
+    //   technology:'HTML, CSS, JS, NODE, Ruby, iOS, SQL',
+    //   duration:3,
+    //   comments:'Best value for your money!',
+    //   costs:17000,
+    //   url:'www.flatiron.com/'
+    // },
+    // {
+    //   name: 'Codeup',
+    //   outcomes: 95,
+    //   location: 'San Antonio',
+    //   logo:'Codeup',
+    //   rating:5,
+    //   technology:'HTML, CSS, JS, NODE, Ruby, iOS, SQL',
+    //   duration:3,
+    //   comments:'They found the key to learning to web dev!',
+    //   costs:17000,
+    //   url:'www.codeup.com/'
+    // }
+  ;
+    db.Bootcamp.create(bootcamp).then(function(dbAuthor) {
+      res.json(dbAuthor);
+    });
+  });
+
   // DELETE route for deleting posts
   app.delete("/api/posts/:id", function(req, res) {
     db.Post.destroy({

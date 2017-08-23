@@ -6,10 +6,12 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var cors = require('cors')
 
 // Sets up the Express App
 // =============================================================
 var app = express();
+app.use(cors());
 var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
@@ -24,11 +26,13 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("public"));
 
+
 // Routes
 // =============================================================
 require("./routes/html-routes.js")(app);
-require("./routes/author-api-routes.js")(app);
+// require("./routes/author-api-routes.js")(app);
 require("./routes/post-api-routes.js")(app);
+require("./routes/user-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================

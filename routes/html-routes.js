@@ -29,7 +29,11 @@ module.exports = function(app) {
 
   // authors route loads author-manager.html
   app.get("/authors", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/author-manager.html"));
+    res.sendFile(path.join(__dirname, "../public/user.html"));
+  });
+
+  app.get("/user", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
 };

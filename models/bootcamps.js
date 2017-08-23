@@ -73,4 +73,5 @@ module.exports = function(sequelize, DataTypes) {
   // };
 
   return Bootcamp;
+  // Bootcamp.sync();
 };
