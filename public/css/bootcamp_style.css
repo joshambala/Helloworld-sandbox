@@ -1,0 +1,13 @@
+.logos{
+  width:200px;
+}
+
+.bootcamp{
+  border:1px solid black;
+  text-align: center;
+}
+
+.bootcamp_image{
+  vertical-align: middle;
+  margin-top: 25px;
+}

@@ -51,47 +51,12 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/bootcamps", function(req, res) {
-    var arr =
-    var bootcamp = {
-      name: 'UC Berkeley Extension',
-      outcomes: 90,
-      location: 'San Francisco',
-      logo:'Berkeley',
-      rating:5,
-      technology:'HTML, CSS, JS, NODE, SQL',
-      duration:6,
-      comments:'This course was great. I would totally do it again.',
-      costs:10000,
-      url:'www.codingbootcamp.berkeley.edu/'
-    }
-    // {
-    //   name: 'Flatiron',
-    //   outcomes: 95,
-    //   location: 'New York City',
-    //   logo:'Flatiron',
-    //   rating:5,
-    //   technology:'HTML, CSS, JS, NODE, Ruby, iOS, SQL',
-    //   duration:3,
-    //   comments:'Best value for your money!',
-    //   costs:17000,
-    //   url:'www.flatiron.com/'
-    // },
-    // {
-    //   name: 'Codeup',
-    //   outcomes: 95,
-    //   location: 'San Antonio',
-    //   logo:'Codeup',
-    //   rating:5,
-    //   technology:'HTML, CSS, JS, NODE, Ruby, iOS, SQL',
-    //   duration:3,
-    //   comments:'They found the key to learning to web dev!',
-    //   costs:17000,
-    //   url:'www.codeup.com/'
-    // }
-  ;
-    db.Bootcamp.create(bootcamp).then(function(dbAuthor) {
-      res.json(dbAuthor);
+//get route to link database values to front end
+  app.get("/api/bootcamp", function(req, res) {
+// Grabbing all the data from database
+    db.Bootcamp.findAll({}).then(function(bootcamps){
+      // console.log(bootcamps);
+      res.json(bootcamps);
     });
   });
 
@@ -109,13 +74,12 @@ module.exports = function(app) {
   // PUT route for updating posts
   app.put("/api/posts", function(req, res) {
     db.Post.update(
-      req.body,
-      {
+      req.body, {
         where: {
           id: req.body.id
         }
       }).then(function(dbPost) {
-        res.json(dbPost);
-      });
+      res.json(dbPost);
+    });
   });
 };

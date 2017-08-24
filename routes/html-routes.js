@@ -36,4 +36,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/user.html"));
   });
 
+  app.get("/bootcamp", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/bootcamp.html"));
+  });
+
 };

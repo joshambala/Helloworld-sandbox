@@ -12,7 +12,7 @@ var cors = require('cors')
 // =============================================================
 var app = express();
 app.use(cors());
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8082;
 
 // Requiring our models for syncing
 var db = require("./models");
@@ -36,7 +36,7 @@ require("./routes/user-routes.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
-db.sequelize.sync({ force: true }).then(function() {
+db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
